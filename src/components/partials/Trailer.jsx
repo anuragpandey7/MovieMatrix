@@ -8,8 +8,10 @@ const Trailer = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const category = pathname.includes("movie") ? "movie" : "tv";
-  const ytvideo = useSelector((state) => state[category].info.tvvideos);
-  console.log(ytvideo);
+  const ytvideo = useSelector((state) => state[category].info.movievideos);
+
+  // state[category].info.tvvideos
+  // console.log(ytvideo[category].info.tvvideos);
   return (
     <div className="absolute z-10 bg-[rgba(0,0,0,0.8)] w-screen h-screen flex items-center justify-center top-0 left-0 ">
       <Link
